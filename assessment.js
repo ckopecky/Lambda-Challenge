@@ -50,16 +50,21 @@ function lambdaSchool(num) {
              longestString(['JavaScript', 'HTML', 'CSS']); // returns 'JavaScript'
 */
 
+
 function longestString(strs) {
-     let Max = "";
-     strs.forEach(function(word) {
-       if(word.length > Max.length) {
-        Max = word;
-
-});
-return Max;
-
+     let max = "";
+     for(let i=0;i<strs.length;i++){
+       let word = strs[i];
+       if (word.length>max.length){
+         max = word;
+       }
+       
+     }
+     return max;
 }
+
+
+
 
 /*
 4. Write a function called computeUserAverageAge that has a single parameter called users
@@ -81,15 +86,16 @@ return Max;
              }];
              computeUserAverageAge(users); // returns 62 (This number is rounded up from 61.6666)
 */
+function computeUserAverageAge(users){
+let sum = 0;
 
-function computeUserAverageAge() {
-     const users = users.user.age;
-     let avg = users/users.length;
-     for (let i=0; i<users.length;i++){
-          users += users.reduce[i];
-     return Math.round(avg);
-
+  for (let i=0; i<users.length;i++){
+    user = users[i];
+    sum = sum + user.age;
+  }
+     return Math.round(sum/users.length);
 }
+
 
 module.exports = {
  helloWorld,
